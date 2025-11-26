@@ -1,0 +1,10 @@
+import { signup, getalluser } from "../controller/userController.js";
+import { joinChatAPI,sendMessageAPI,getOnlineUsers } from "../controller/chatController.js";
+import express from "express";
+const router = express.Router();
+router.post("/signup", signup);
+router.get("/users", getalluser);
+router.post("/join", joinChatAPI);
+router.post("/message", sendMessageAPI);
+router.get("/online", getOnlineUsers);
+export default router;
